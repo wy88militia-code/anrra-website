@@ -1,0 +1,25 @@
+name: Extract ANRRA website
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'anrra-portrait-no-overlap-v4.zip'
+      - '.github/workflows/extract-website.yml'
+permissions:
+  contents: write
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract website files
+        run: unzip -o anrra-portrait-no-overlap-v4.zip -d .
+      - name: Commit extracted site
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html anrra-master.jpg hero-interior.jpg
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish ANRRA portrait website source files'
+            git push
+          fi
