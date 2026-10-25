@@ -5,6 +5,7 @@ on:
     paths:
       - 'anrra-master.jpg'
       - '.github/workflows/transparent-logo.yml'
+      - 'index.html'
 permissions:
   contents: write
 jobs:
