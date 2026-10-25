@@ -133,8 +133,12 @@ header{position:absolute!important;top:0!important;left:0!important;right:0!impo
 .hero-image picture{width:112%!important;height:100%!important;transform:translateX(0%)!important}
 .hero-image picture img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important}
 }
+
+/* Seamless logo compositing; transparent master, no boxed backdrop */
+.header-inner .brand,.header-inner .brand img{background:transparent!important;box-shadow:none!important;border:0!important}
+.header-inner .brand img{mix-blend-mode:normal!important;filter:none!important}
 </style></head>
-<body><header><div class="header-inner"><button class="icon-btn menu-toggle" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button><a class="brand" href="#home" aria-label="ANRRA home"><img src="9BCA9715-736D-468B-B5A8-7F7EB6B15095.png" onerror="this.onerror=null;this.src='anrra-master.jpg'" alt="ANRRA Art Objects Living"></a><nav id="nav"><a href="#home">HOME</a><a href="#categories">COLLECTIONS</a><a href="#featured">FEATURED</a><a href="#story">OUR STORY</a><a href="#contact">CONTACT</a></nav><div class="header-actions"><a href="#contact" class="icon-btn" aria-label="Contact ANRRA">↗</a></div></div></header>
+<body><header><div class="header-inner"><button class="icon-btn menu-toggle" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button><a class="brand" href="#home" aria-label="ANRRA home"><img src="anrra-logo-transparent.png" onerror="this.onerror=null;this.src='anrra-master.jpg'" alt="ANRRA Art Objects Living"></a><nav id="nav"><a href="#home">HOME</a><a href="#categories">COLLECTIONS</a><a href="#featured">FEATURED</a><a href="#story">OUR STORY</a><a href="#contact">CONTACT</a></nav><div class="header-actions"><a href="#contact" class="icon-btn" aria-label="Contact ANRRA">↗</a></div></div></header>
 <main id="home"><section class="hero"><div class="hero-image"><picture><source media="(max-width: 760px)" srcset="2CAF1B31-28AA-49C0-8C67-429CE7AD3327.png"><img src="A447708D-4BDE-43BC-AD8F-9EA69A299274.png" alt="ANRRA Monstera interior"></picture></div><div class="hero-content"><p class="eyebrow">NATURAL BEAUTY<br>FOR A MORE MEANINGFUL LIFE</p><h1>Timeless<br>Objects for<br>Modern Living</h1><p class="hero-description">Curated art, objects and living pieces that bring nature, craftsmanship and quiet luxury into your home.</p><a class="cta" href="#categories">EXPLORE COLLECTIONS <span aria-hidden="true">→</span></a></div></section>
 
 <section class="section-wrap" id="categories"><div class="section-heading"><div><p class="eyebrow">OUR COLLECTIONS</p><h2 class="section-title">Crafted by Nature,<br>Made for Living</h2></div></div><div class="category-grid">
